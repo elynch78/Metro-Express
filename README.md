@@ -1,8 +1,8 @@
 # Circuit Python
 
 ## Table of Contents
-*[Table of Contents](#Table-of-Contents)
-*[Mu color changes](#Mu-color-changes)
+* [Table of Contents](#Table-of-Contents)
+* [Mu color changes](#Mu-color-changes)
 
 
 
