@@ -40,7 +40,7 @@ while True:
 
 
 ### Evidence
-![Servo](Images/gif-servo.gif)
+
 
 ### Wiring
 Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
@@ -76,6 +76,8 @@ while True:
 ```
 
 ### Evidence
+
+![Servo](Images/gif-servo.gif)
 
 ### Wiring
 
