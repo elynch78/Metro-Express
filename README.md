@@ -11,7 +11,7 @@ This repository will actually serve as a aid to help you get started with your o
 ## Blink_Led_CircuitPython
 
 ### Description & Code
-I had to make code in Mu that would make the Metro Express change colors. [This website](https://www.w3schools.com/colors/colors_picker.asp) was very fun to use because it had all the codes for lots of different colors. 
+I had to make code in Mu that would make the Metro Express change colors. [This website](https://www.w3schools.com/colors/colors_picker.asp) was a great source because it had all the codes for lots of different colors. 
 
 Here's how you make code look like code:
 
@@ -40,15 +40,14 @@ while True:
 
 
 ### Evidence
-
+![Servo](Images/gif-servo.gif)
 
 ### Wiring
 Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
 Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
 
 ### Reflection
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience?  Your ultimate goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person.
-
+The led was changing too fast in the beginning, so I made the time.sleep (.5) seconds long so you could see each color fully before it switched to the next. It was easy to add more colors once you got the first 2 running, you would just copy the above code format, and then change the color you have written and the numbers for the color calibration. 
 
 
 
