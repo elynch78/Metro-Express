@@ -43,8 +43,8 @@ while True:
 ![Blink led](Images/gif-led.gif)
 
 ### Wiring
-Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
-Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+
+No wiring was needed, the Metro express had the neopixel.
 
 ### Reflection
 The led was changing too fast in the beginning, so I made the time.sleep (.5) seconds long so you could see each color fully before it switched to the next. It was easy to add more colors once you got the first 2 running, you would just copy the above code format, and then change the color you have written and the numbers for the color calibration. 
@@ -80,6 +80,9 @@ while True:
 ![Servo](Images/gif-servo.gif)
 
 ### Wiring
+
+Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
+Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
 
 ### Reflection
 
