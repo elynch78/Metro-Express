@@ -1,5 +1,5 @@
 # CircuitPython
-This repository will actually serve as a aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
+
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
 * [Blink Led](#Blink_Led_CircuitPython)
@@ -13,7 +13,6 @@ This repository will actually serve as a aid to help you get started with your o
 ### Description & Code
 I had to make code in Mu that would make the Metro Express change colors. [This website](https://www.w3schools.com/colors/colors_picker.asp) was a great source because it had all the codes for lots of different colors. 
 
-Here's how you make code look like code:
 
 ```
 import board
