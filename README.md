@@ -2,22 +2,40 @@
 This repository will actually serve as a aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
-* [Hello_CircuitPython](#Hello_CircuitPython)
+* [Blink Led](#Blink_Led_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
 * [NextAssignmentGoesHere](#NextAssignment)
 ---
 
-## Hello_CircuitPython
+## Blink_Led_CircuitPython
 
 ### Description & Code
 I had to make code in Mu that would make the Metro Express change colors. [This website](https://www.w3schools.com/colors/colors_picker.asp) was very fun to use because it had all the codes for lots of different colors. 
 
 Here's how you make code look like code:
 
-```python
-Code goes here
+```
+import board
+import neopixel
+import time
 
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
+
+while True:
+    dot.brightness = (.1)
+    print("Make it red!")
+    dot.fill((255, 51, 0))
+    time.sleep(.5)
+    print("Make it dark blue!")
+    dot.fill((0, 0, 102))
+    time.sleep(.5)
+    print("Make it fuscia!")
+    dot.fill((204, 0, 102))
+    time.sleep(.5)
+    print("Make it yellow!")
+    dot.fill((255, 255, 0))
+    time.sleep(.5)
 ```
 
 
@@ -38,7 +56,7 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 
 ### Description & Code
 
-```python
+```
 import board
 import pwmio
 from adafruit_motor import servo
