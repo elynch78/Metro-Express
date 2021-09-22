@@ -54,7 +54,7 @@ The led was changing too fast in the beginning, so I made the time.sleep (.5) se
 ## CircuitPython_Servo
 
 ### Description & Code
-
+I had to code the servo to turn 180 degrees repeatedly. 
 ```
 import board
 import pwmio
@@ -79,14 +79,10 @@ while True:
 
 ![Servo](Images/gif-servo.gif)
 
-### Wiring
-
-Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
-Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
 
 ### Reflection
 
-
+I didn't realize the different colors of the motor had designated spots in the Metro. The red wire goes to 5V, the blue wire goes to GND , and the yellow wire goes to A2. Once I had the wires in the right spots, the servo started turning right. 
 
 
 ## CircuitPython_LCD
@@ -124,6 +120,8 @@ Code goes here
 ### Reflection
 
 
+Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
+Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
 
 
 
