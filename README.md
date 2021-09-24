@@ -88,9 +88,50 @@ I didn't realize the different colors of the motor had designated spots in the M
 ## CircuitPython_LCD
 
 ### Description & Code
+The neopixel needs to change colors according to the distance measured by the servo. For values between 0 and 20 the color is red, values between 20 and 35 are blue, and for any value greater than 35 the color is green. 
 
-```python
-Code goes here
+```
+import time
+import board
+import adafruit_hcsr04
+import neopixel
+import simpleio
+
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+cm = 0
+
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
+dot.brightness = (.1)
+
+while True:
+    try:
+        cm = sonar.distance
+        print((cm,))
+        if cm < 20:
+            print("red")
+            r = simpleio.map_range(cm, 5, 20, 255, 0)
+            g = 0
+            b = 0
+            
+            time.sleep(0.1)
+
+        if cm > 20 and cm < 35:
+            print("blue")
+            time.sleep(0.1)
+            r = 0
+            g = 0
+            b = simpleio.map_range(cm, 0, 20, 255, 0)
+        if cm > 35:
+            print("green")
+            time.sleep(0.1)
+            r = 0
+            g = simpleio.map_range(cm, 20, 30, 0, 255)
+            b = 0
+        dot.fill((r, g, b))
+
+    except RuntimeError:
+        print("Retrying!")
+    time.sleep(0.1)
 
 ```
 
@@ -101,9 +142,7 @@ Code goes here
 ### Wiring
 
 ### Reflection
-
-
-
+This assignment was more complicated than previous ones for me. Using simpleio made the color changing work, and earlier I had been using dot.fill but that was required determining dot and simpleio just made sense and worked. simpleio.map_range(x, in_min, in_max, out_min, out_max) is what I used, but replaced x with cm, because that was what I am using to determine distance and that is what determines the color change. The values where the color changes goes in for in_max or min, and the neopixel number (255) goes in for out_min or max. [I downloaded this to my lib folder so I could use simpleio](https://circuitpython.readthedocs.io/projects/simpleio/en/latest/_modules/simpleio.html#map_range)
 
 
 ## NextAssignment
