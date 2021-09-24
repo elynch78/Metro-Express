@@ -96,6 +96,8 @@ Code goes here
 
 ### Evidence
 
+![servo](Images/gif-distance.gif)
+
 ### Wiring
 
 ### Reflection
