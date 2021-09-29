@@ -5,7 +5,7 @@
 * [Blink Led](#Blink_Led_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* [NextAssignmentGoesHere](#NextAssignment)
+* [Photointurrupter](#Photointurrupter)
 ---
 
 ## Blink_Led_CircuitPython
@@ -145,12 +145,28 @@ while True:
 This assignment was more complicated than previous ones for me. Using simpleio made the color changing work, and earlier I had been using dot.fill but that was required determining dot and simpleio just made sense and worked. simpleio.map_range(x, in_min, in_max, out_min, out_max) is what I used, but replaced x with cm, because that was what I am using to determine distance and that is what determines the color change. The values where the color changes goes in for in_max or min, and the neopixel number (255) goes in for out_min or max. [I downloaded this to my lib folder so I could use simpleio.](https://circuitpython.readthedocs.io/projects/simpleio/en/latest/_modules/simpleio.html#map_range)
 
 
-## NextAssignment
+## Photointurrupter
 
 ### Description & Code
 
-```python
-Code goes here
+```
+photo = False
+state = False
+
+max = 4
+start = time.time()
+while True:
+    photo = interrupter.value
+    if photo and not state:
+            counter += 1
+    state = photo
+
+    remaining = max - time.time()
+
+    if remaining <= 0:
+        print("The number of interrupts is :", str(counter))
+        max = time.time() + 4
+        counter = 0
 
 ```
 
