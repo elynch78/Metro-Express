@@ -149,6 +149,9 @@ This assignment was more complicated than previous ones for me. Using simpleio m
 
 ### Description & Code
 
+I had to make the code tell when the photointerrupter was interrupted. The red light on the side of the t interrupter would go out when it was interrupted, and if it was red then I had it wired correctly. 
+
+
 ```
 photo = False
 state = False
@@ -177,6 +180,13 @@ while True:
 ### Wiring
 
 ### Reflection
+
+The code I grabbed was originally from user gventr04 on github. At first I had my wiring wrong because the OUT was put in an Analog Input instead of a Digital input. You CANNOT let the + or L outputs touch OUT or (-). You should connect the + and L outputs by either soldering or using tape or a metal clip to put them together. I had them soldered together which is the easiest in my opinion. 
+
+
+
+
+
 
 
 Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
