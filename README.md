@@ -4,7 +4,7 @@
 * [Table of Contents](#TableOfContents)
 * [Blink Led](#Blink_Led_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
-* [CircuitPython_LCD](#CircuitPython_LCD)
+* [CircuitPython_Distance LED](#CircuitPython_Distance_LED)
 * [Photointurrupter](#Photointurrupter)
 * [new assignment](#new_assignment)
 ---
@@ -86,7 +86,7 @@ while True:
 I didn't realize the different colors of the motor had designated spots in the Metro. The red wire goes to 5V, the blue wire goes to GND , and the yellow wire goes to A2. Once I had the wires in the right spots, the servo started turning right. 
 
 
-## CircuitPython_LCD
+## CircuitPython_Distance_LED
 
 ### Description & Code
 The neopixel needs to change colors according to the distance measured by the servo. For values between 0 and 20 the color is red, values between 20 and 35 are blue, and for any value greater than 35 the color is green. 
@@ -140,7 +140,6 @@ while True:
 
 ![servo](Images/gif-distance.gif)
 
-### Wiring
 
 ### Reflection
 This assignment was more complicated than previous ones for me. Using simpleio made the color changing work, and earlier I had been using dot.fill but that was required determining dot and simpleio just made sense and worked. simpleio.map_range(x, in_min, in_max, out_min, out_max) is what I used, but replaced x with cm, because that was what I am using to determine distance and that is what determines the color change. The values where the color changes goes in for in_max or min, and the neopixel number (255) goes in for out_min or max. [I downloaded this to my lib folder so I could use simpleio.](https://circuitpython.readthedocs.io/projects/simpleio/en/latest/_modules/simpleio.html#map_range)
@@ -178,7 +177,6 @@ while True:
 
 ![Photointerrupter](Images/gif-photointerrupter.gif)
 
-### Wiring
 
 ### Reflection
 
