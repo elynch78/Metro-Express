@@ -172,6 +172,8 @@ while True:
 
 ### Evidence
 
+![Photointerrupter](Images/gif-photointerrupter)
+
 ### Wiring
 
 ### Reflection
