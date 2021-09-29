@@ -183,6 +183,43 @@ while True:
 
 The code I grabbed was originally from user gventr04 on github. At first I had my wiring wrong because the OUT was put in an Analog Input instead of a Digital input. You CANNOT let the + or L outputs touch OUT or (-). You should connect the + and L outputs by either soldering or using tape or a metal clip to put them together. I had them soldered together which is the easiest in my opinion. 
 
+## new
+
+### Description & Code
+
+write stuff
+
+
+```
+code
+
+```
+
+### Evidence
+
+gif
+
+### Wiring
+
+### Reflection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
