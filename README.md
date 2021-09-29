@@ -172,7 +172,7 @@ while True:
 
 ### Evidence
 
-![Photointerrupter](Images/gif-photointerrupter)
+![Photointerrupter](Images/gif-photointerrupter.gif)
 
 ### Wiring
 
