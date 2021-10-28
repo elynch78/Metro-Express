@@ -11,7 +11,7 @@
 ## Blink_Led_CircuitPython
 
 ### Description & Code
-I had to make code in Mu that would make the Metro Express change colors. [This website](https://www.w3schools.com/colors/colors_picker.asp) was a great source because it had all the codes for lots of different colors. 
+I had to make code in Mu that would make the Metro Express neopixel change colors. [This website](https://www.w3schools.com/colors/colors_picker.asp) was a great source because it had all the codes for lots of different colors. 
 
 
 ```
@@ -42,12 +42,9 @@ while True:
 
 ![Blink led](Images/gif-led.gif)
 
-### Wiring
-
-No wiring was needed, the Metro express had the neopixel.
 
 ### Reflection
-The led was changing too fast in the beginning, so I made the time.sleep (.5) seconds long so you could see each color fully before it switched to the next. It was easy to add more colors once you got the first 2 running, you would just copy the above code format, and then change the color you have written and the numbers for the color calibration. 
+The led was changing too fast in the beginning that I could barely tell it was changing, so I made the time.sleep (.5) seconds long so you could see each color fully before it switched to the next. It was easy to add more colors once you got the first 2 running, you would just copy the above code format, and then change the color you have written and the numbers for the color calibration. 
 
 
 
@@ -55,6 +52,7 @@ The led was changing too fast in the beginning, so I made the time.sleep (.5) se
 
 ### Description & Code
 I had to code the servo to turn 180 degrees repeatedly. 
+
 ```
 import board
 import pwmio
