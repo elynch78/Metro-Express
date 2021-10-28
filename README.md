@@ -6,7 +6,6 @@
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_Distance LED](#CircuitPython_Distance_LED)
 * [Photointurrupter](#Photointurrupter)
-* [CircuitPython LCD](#Circuitpython_LCD)
 ---
 
 ## Blink_Led_CircuitPython
@@ -181,67 +180,4 @@ while True:
 ### Reflection
 
 The code I grabbed was originally from user gventr04 on github. At first I had my wiring wrong because the OUT was put in an Analog Input instead of a Digital input. You CANNOT let the + or L outputs touch OUT or (-). You should connect the + and L outputs by either soldering or using tape or a metal clip to put them together. I had them soldered together which is the easiest in my opinion. 
-
-## CircuitPython_LCD
-
-### Description & Code
-
-write stuff
-
-
-```
-code
-
-```
-
-### Evidence
-
-gif
-
-### Wiring
-
-### Reflection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
-Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
