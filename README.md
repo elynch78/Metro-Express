@@ -14,7 +14,7 @@
 I had to make code in Mu that would make the Metro Express neopixel change colors. [This website](https://www.w3schools.com/colors/colors_picker.asp) was a great source because it had all the codes for lots of different colors. 
 
 
-```
+``` python
 import board
 import neopixel
 import time
@@ -22,14 +22,16 @@ import time
 dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
 
 while True:
-    dot.brightness = (.1)
-    print("Make it red!")
-    dot.fill((255, 51, 0))
-    time.sleep(.5)
+    dot.brightness = (.1)   # Saves the led, makes it less bright
+    
+    
+    print("Make it red!")   
+    dot.fill((255, 51, 0))  # Tells the led to fade through the color red
+    time.sleep(.5)          # Makes the led wait before moving to the next color
     print("Make it dark blue!")
     dot.fill((0, 0, 102))
     time.sleep(.5)
-    print("Make it fuscia!")
+    print("Make it fuscia!") # Command for the individual color
     dot.fill((204, 0, 102))
     time.sleep(.5)
     print("Make it yellow!")
@@ -53,7 +55,7 @@ The led was changing too fast in the beginning that I could barely tell it was c
 ### Description & Code
 I had to code the servo to turn 180 degrees repeatedly. 
 
-```
+```python
 import board
 import pwmio
 from adafruit_motor import servo
@@ -65,10 +67,10 @@ pwm = pwmio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
 my_servo = servo.Servo(pwm)
 
 while True:
-    for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time.
+    for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time. # make servo turn 180 degrees, in increments of 5 degrees
         my_servo.angle = angle
         time.sleep(0.05)
-    for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
+    for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time. # make servo turn back 180 degrees, in increments of 5 degrees
         my_servo.angle = angle
         time.sleep(0.05)
 ```
@@ -88,7 +90,7 @@ I didn't realize the different colors of the motor had designated spots in the M
 ### Description & Code
 The neopixel needs to change colors according to the distance measured by the servo. For values between 0 and 20 the color is red, values between 20 and 35 are blue, and for any value greater than 35 the color is green. 
 
-```
+```python
 import time
 import board
 import adafruit_hcsr04
@@ -105,7 +107,8 @@ while True:
     try:
         cm = sonar.distance
         print((cm,))
-        if cm < 20:
+        
+        if cm < 20:  # when the object is under 20 cm away, the led is red
             print("red")
             r = simpleio.map_range(cm, 5, 20, 255, 0)
             g = 0
@@ -113,23 +116,24 @@ while True:
             
             time.sleep(0.1)
 
-        if cm > 20 and cm < 35:
+        if cm > 20 and cm < 35: # for all distance values between 20 and 35 the led will be blue
             print("blue")
             time.sleep(0.1)
             r = 0
             g = 0
             b = simpleio.map_range(cm, 0, 20, 255, 0)
-        if cm > 35:
+            
+        if cm > 35:  # for all distance values greater than 35 cm, led will be green
             print("green")
             time.sleep(0.1)
             r = 0
             g = simpleio.map_range(cm, 20, 30, 0, 255)
             b = 0
-        dot.fill((r, g, b))
+        dot.fill((r, g, b)) # the order of led colors and values
 
     except RuntimeError:
         print("Retrying!")
-    time.sleep(0.1)
+    time.sleep(0.1) 
 
 ```
 
@@ -149,7 +153,7 @@ This assignment was more complicated than previous ones for me. Using simpleio m
 I had to make the code tell when the photointerrupter was interrupted. The red light on the side of the t interrupter would go out when it was interrupted, and if it was red then I had it wired correctly. 
 
 
-```
+``` python
 photo = False
 state = False
 
