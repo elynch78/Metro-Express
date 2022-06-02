@@ -228,6 +228,8 @@ while True:
         time.sleep(0.1)
 ```
 
+Code credit to [aniyahmoore28](https://github.com/aniyahmoore28)
+
 ### Wiring Diagram
 
 ![LCD Screen](Images/LCD.png)
