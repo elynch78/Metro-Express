@@ -230,6 +230,8 @@ while True:
 
 ### Wiring Diagram
 
+![LCD Screen](Images/LCD_Screen.png)
+
 
 [Link to Abby Paquet's diagram](https://github.com/Apaquet37/CircuitPython/blob/master/Media/Final%20LCD%20screen%20fritzing%20diagram%20image.png)
 
