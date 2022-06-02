@@ -6,6 +6,7 @@
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_Distance LED](#CircuitPython_Distance_LED)
 * [Photointurrupter](#Photointurrupter)
+* [CircuitPython_LCD](#CircuitPython_LCD)
 ---
 
 ## Blink_Led_CircuitPython
@@ -182,4 +183,65 @@ while True:
 ### Reflection
 
 The code I grabbed was originally from user gventr04 on github. At first I had my wiring wrong because the OUT was put in an Analog Input instead of a Digital input. You CANNOT let the + or L outputs touch OUT or (-). You should connect the + and L outputs by either soldering or using tape or a metal clip to put them together. I had them soldered together which is the easiest in my opinion. 
+
+
+## CircuitPython_LCD
+
+
+### Description & Code
+
+The goal was to make the code tell when the photointerrupter was interrupted. If wired correctly, the red light to the side of the interrupter would go out when it was inturrupted. 
+
+
+``` python
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import digitalio
+import board
+import time
+from lcd.lcd import CursorMode
+
+# Talk to the LCD at I2C address 0x27.
+# The number of rows and columns defaults to 2x16, so those
+# arguments could be omitted in this case.
+lcd = LCD(I2CPCF8574Interface(0x27), num_rows=2, num_cols=16)
+
+lcd.clear()
+
+lcd.print("Switch State:")
+lcd.set_cursor_pos(0, 0)
+
+
+button_a = digitalio.DigitalInOut(board.D2)
+button_a.direction = digitalio.Direction.INPUT
+button_a.pull = digitalio.Pull.DOWN
+
+counter = 0
+while True:
+    if button_a.value:
+        counter += 1
+        lcd.set_cursor_pos(1, 4)
+        lcd.print(str(counter))
+        time.sleep(0.1)
+    else:
+        counter = counter
+        time.sleep(0.1)
+```
+
+### Evidence
+
+![Photointerrupter](Images/gif-photointerrupter.gif)
+
+
+[Link to Abby Paquet's diagram](https://github.com/Apaquet37/CircuitPython/blob/master/Media/Final%20LCD%20screen%20fritzing%20diagram%20image.png)
+
+
+### Reflection
+
+The diagram I grabbed was from Abby Paquet because I thought it did a good job of showing how to set up for a photo inturrupter. This assigment was not too difficult but the button my partner and I used was continuously counting up and down. To fix this we used an oldButtonState so that each press of the button would count for a single one on the LCD. We used [this website](https://learn.adafruit.com/sensor-plotting-with-mu-and-circuitpython/buttons-and-switch) to learn how to use oldButtonState and it even had an example code to help you understand it. 
+
+
+
+
+
 
